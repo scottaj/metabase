@@ -1,0 +1,27 @@
+info:
+  name: Metabase Scripting Driver
+  version: 1.0.0-SNAPSHOT-3.9.0
+  description: Allows Metabase to connect to execute arbitrary post processing scripts.
+driver:
+  name: scripting
+  display-name: Scripting Language
+  lazy-load: true
+  connection-properties:
+    - name: interpreter
+      type: string
+      display-name: Full path to script interpreter executable
+      placeholder: '/usr/bin/python'
+      required: true
+    - name: script-directory
+      type: string
+      display-name: Directory containing scripts
+      placeholder: '/home/myuser/metabase-scripts'
+      required: true
+    - name: script-matcher
+      type: string
+      display-name: Glob matcher for scripts
+      placeholder: '*-metabase.py'
+      required: true
+init:
+  - step: load-namespace
+    namespace: metabase.driver.scripting

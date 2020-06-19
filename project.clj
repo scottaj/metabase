@@ -138,8 +138,8 @@
                                  org.clojure/tools.logging
                                  org.clojure/tools.namespace
                                  honeysql]]
-   [weavejester/dependency "0.2.1"]                                   ; Dependency graphs and topological sorting
-   ]
+   [weavejester/dependency "0.2.1"]]                                   ; Dependency graphs and topological sorting
+
 
   :main ^:skip-aot metabase.core
 
